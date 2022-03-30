@@ -28,9 +28,13 @@ docker-compose up -d
 
 (in browser) http://localhost:8080
 
-curl -H Host:whoami.docker.localhost http://127.0.0.1
+(in browser) http://localhost
 
-docker-compose up -d --scale whoami=4 
+docker-compose up -d --scale whoami=4
+
+(in browser) http://localhost
+
+// watch the hostname & IP of each container change! We are load balancing!
 ```
 
 ## Cleaning up
