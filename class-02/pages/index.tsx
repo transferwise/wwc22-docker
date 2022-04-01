@@ -1,13 +1,13 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Todo from './Todo';
+import App from '../components/App';
 
 const DATA = [
   { id: "todo-0", name: "Eat", completed: true },
-  { id: "todo-1", name: "Sleep", completed: false },
-  { id: "todo-2", name: "Repeat", completed: false }
+  { id: "todo-1", name: "Code", completed: false },
+  { id: "todo-2", name: "Sleep", completed: false },
+  { id: "todo-3", name: "Repeat", completed: false }
 ];
 
 const Home: NextPage = () => {
@@ -20,7 +20,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <Todo tasks={DATA} />
+        <App tasks={DATA} />
       </main>
 
       <footer className={styles.footer}>
